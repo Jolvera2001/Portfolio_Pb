@@ -8,11 +8,11 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-full bg-zinc-900 text-text-color space-y-4 font-nunito overflow-auto text-md">
+      <div className="w-full h-full bg-zinc-900 text-text-color space-y-10 font-nunito overflow-auto text-md">
         <NavBar />
         <Hero />
-        <Experience />
         <Portfolio />
+        <Experience />
         <Contact />
       </div>
     </>
