@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-full bg-zinc-900 text-white space-y-4 font-nunito overflow-auto">
+      <div className="w-full h-full bg-zinc-900 text-text-color space-y-4 font-nunito overflow-auto text-md">
         <NavBar />
         <Hero />
         <Experience />
