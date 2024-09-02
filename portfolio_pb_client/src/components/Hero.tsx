@@ -1,8 +1,12 @@
+
+
 function Hero() {
     return(
-        <div>
-            <h1 className="text-4xl">This is the Hero Section</h1>
-            <p>Hello World!</p>
+        <div className='relative w-screen h-5/6 overflow-hidden flex items-center'>
+            <div className="relative z-10 flex flex-col items-center justify-center w-screen space-y-2">
+                <h1 className="text-5xl font-bold">Johan Olvera</h1>
+                <p className="text-xl">Software Developer</p>
+            </div>
         </div>
     )
 }
