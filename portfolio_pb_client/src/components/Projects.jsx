@@ -11,7 +11,7 @@ import {
     Icon
 } from '@chakra-ui/react'
 
-function Projects() {
+function Projects({ projectData }) {
     return(
         <>
             <Box p={5} m={5}>
@@ -20,7 +20,7 @@ function Projects() {
                         <Heading>Projects</Heading>
                     </Center>
                     <Divider borderWidth='1.5px' borderColor='black' />
-                    {personalData.projectsData.map((item) => (
+                    {projectData.map((item) => (
                         <Box key={item.id}>
                             <Heading size='lg'>{item.name}</Heading>
                             <Text as='b' fontSize='xl'>{item.date}</Text>

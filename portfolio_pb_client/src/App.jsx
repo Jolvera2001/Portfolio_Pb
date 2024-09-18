@@ -66,17 +66,17 @@ function App() {
           <Container maxW='4xl'>
             {activeTab === 'aboutMe' &&
               <SlideFade in={activeTab === 'aboutMe'}>
-                <Aboutme />
+                <Aboutme personalData={{}} />
               </SlideFade>
             }
             {activeTab === 'experience' &&
               <SlideFade in={activeTab === 'experience'}>
-                <Experience />
+                <Experience experienceData={{}}/>
               </SlideFade>
             }
             {activeTab === 'projects' &&
               <SlideFade in={activeTab === 'projects'}>
-                <Projects />
+                <Projects projectData={{}}/>
               </SlideFade>
             }
           </Container>

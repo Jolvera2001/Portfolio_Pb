@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
     Box,
     Center,
@@ -9,7 +10,7 @@ import {
     Stack
 } from '@chakra-ui/react'
 
-function Experience() {
+function Experience({ experienceData }) {
     return (
         <>
             <Box p={5} m={5}>
@@ -18,7 +19,7 @@ function Experience() {
                         <Heading>Experience</Heading>
                     </Center>
                     <Divider borderWidth='1.5px' borderColor='black' />
-                    {personalData.experienceData.map((item) => (
+                    {experienceData.map((item) => (
                         <Box key={item.id}>
                             <HStack mb={2}>
                                 <Image name='NI' boxSize='50px' objectFit='cover' />

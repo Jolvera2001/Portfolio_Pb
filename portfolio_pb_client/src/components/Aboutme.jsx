@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
     Box, 
     Stack,
@@ -7,7 +8,7 @@ import {
     Text
 } from '@chakra-ui/react'
 
-function Aboutme() {
+function Aboutme({ personalData }) {
     return (
         <>
             <Box p={5} m={5}>
@@ -20,7 +21,7 @@ function Aboutme() {
                         <Text fontSize='3xl' my={5} >{personalData.aboutMeData.intro}</Text>
                     </Center>
                     <Text fontSize='xl'>{personalData.aboutMeData.body}</Text>
-                    <Text fontSize='xl'>{personalData.aboutMeData.closing}</Text>
+                    <Text fontSize='xl'>{personalData.aboutMeData.closer}</Text>
                 </Stack>
             </Box>
         </>
