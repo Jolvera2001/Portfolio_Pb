@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/",
   plugins: [react()],
-  define: {
-    "process.env": `import.meta.env.VITE_APP_SPACE_TOKEN`,
+  build: {
+    outDir: "../pb_public"
   }
 })
