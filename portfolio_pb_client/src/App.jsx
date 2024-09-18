@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   Box,
   Container,
@@ -23,10 +23,6 @@ import Projects from './components/Projects';
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
-
-  useEffect(() => {
-    
-  }, []);
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -66,17 +62,17 @@ function App() {
           <Container maxW='4xl'>
             {activeTab === 'aboutMe' &&
               <SlideFade in={activeTab === 'aboutMe'}>
-                <Aboutme personalData={{}} />
+                <Aboutme />
               </SlideFade>
             }
             {activeTab === 'experience' &&
               <SlideFade in={activeTab === 'experience'}>
-                <Experience experienceData={{}}/>
+                <Experience />
               </SlideFade>
             }
             {activeTab === 'projects' &&
               <SlideFade in={activeTab === 'projects'}>
-                <Projects projectData={{}}/>
+                <Projects />
               </SlideFade>
             }
           </Container>
