@@ -5,11 +5,19 @@ RUN apk add --no-cache \
     unzip \
     ca-certificates
 
-    ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
-    RUN unzip /tmp/pb.zip -d /pb/
+ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
+RUN unzip /tmp/pb.zip -d /pb/
 
+# copying data migrations
 COPY  ./pb_migrations /pb/pb_migrations
 
+# copying client
+COPY ./pb_public /pb/pb_public
+
+# creating volume
+VOLUME /pb/pb_data
+
+# port
 EXPOSE 8080
 
 # start pocketbase
