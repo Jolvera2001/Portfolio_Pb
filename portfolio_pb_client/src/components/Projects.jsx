@@ -28,8 +28,10 @@ function Projects() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const records = await pb.collection('projects').getFullList({});
-                console.log(records);
+                const records = await pb.collection('projects').getFullList({ 
+                    sort: '-date_started', 
+                });
+                console.log(records); 
                 setProjects(records);
             } catch (err) {
                 console.error(err);
