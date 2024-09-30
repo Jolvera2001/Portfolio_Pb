@@ -14,6 +14,9 @@ COPY  ./pb_migrations /pb/pb_migrations
 # copying client
 COPY ./pb_public /pb/pb_public
 
+# copying data if it exists
+COPY ./pb_data /pb/pb_data
+
 # creating volume
 VOLUME /pb/pb_data
 
