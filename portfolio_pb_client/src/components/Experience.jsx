@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react'
 
 function Experience() {
-    const pb = new PocketBase('https://portfolio-pb-long-pond-9559.fly.dev');
+    const pb = new PocketBase(`${window.location.protocol}`);
     const [Experience, setExperience] = useState(null);
 
     function formatDate(dateString) {
@@ -52,7 +52,7 @@ function Experience() {
                                 <Heading>{item.title}</Heading>
                                 <HStack my={2}>
                                     <Image boxSize='50px' objectFit='cover' src={
-                                        `http://127.0.0.1:8090/api/files/experiences/${item.id}/${item.logo}`}/> 
+                                        `${window.location.protocol}/api/files/experiences/${item.id}/${item.logo}`}/>
                                     <Heading size='lg'>{item.company}</Heading>
                                 </HStack>
                                 <Text as='b' fontSize='xl'>{formatDate(item.date_start)} - {formatDate(item.date_end)}</Text>
