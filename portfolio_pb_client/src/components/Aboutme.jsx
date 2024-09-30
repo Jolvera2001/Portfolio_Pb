@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 
 function Aboutme() {
-    const pb = new PocketBase('http://127.0.0.1:8090');
+    const pb = new PocketBase(`${window.location.protocol}:${window.location.hostname}`);
     const [Personal, setPersonal] = useState(null);
 
     useEffect(() => {

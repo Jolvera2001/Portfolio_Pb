@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 
 function Projects() {
-    const pb = new PocketBase('http://127.0.0.1:8090');
+    const pb = new PocketBase(`${window.location.protocol}:${window.location.hostname}`);
     const [Projects, setProjects] = useState(null);
 
     function formatDate(dateString) {
