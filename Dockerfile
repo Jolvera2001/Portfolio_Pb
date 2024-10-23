@@ -9,9 +9,7 @@ ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/po
 RUN unzip /tmp/pb.zip -d /pb/
 
 # Create necessary directories
-RUN mkdir -p /pb/pb_public /pb/pb_migrations /pb/pb_data
-
-COPY --from=frontend-build /app/pb_public /pb/pb_public
+RUN mkdir -p /pb/pb_migrations /pb/pb_data
 
 # copying data migrations
 COPY  ./pb_migrations /pb/pb_migrations
