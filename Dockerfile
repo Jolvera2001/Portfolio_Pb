@@ -1,3 +1,9 @@
+FROM node:alpine AS frontend-build
+WORKDIR /app
+COPY portfolio-pb-client/ .
+RUN npm install
+RUN npm run build
+
 FROM alpine:latest
 ARG PB_VERSION=0.22.21
 
@@ -10,6 +16,8 @@ RUN unzip /tmp/pb.zip -d /pb/
 
 # Create necessary directories
 RUN mkdir -p /pb/pb_public /pb/pb_migrations /pb/pb_data
+
+COPY --from=frontend-build /app/pb_public /pb/pb_public
 
 # copying data migrations
 COPY  ./pb_migrations /pb/pb_migrations
