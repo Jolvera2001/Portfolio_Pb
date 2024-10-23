@@ -1,9 +1,3 @@
-FROM node:alpine AS frontend-build
-WORKDIR /app
-COPY portfolio-pb-client/ .
-RUN npm install
-RUN npm run build
-
 FROM alpine:latest
 ARG PB_VERSION=0.22.21
 
