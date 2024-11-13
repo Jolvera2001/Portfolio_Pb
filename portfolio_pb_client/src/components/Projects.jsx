@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 
 function Projects() {
-    const pb = new PocketBase('https://portfolio-pb-long-pond-9559.fly.dev');
+    const pb = new PocketBase('http://143.198.237.109:8090');
     const [Projects, setProjects] = useState(null);
 
     function formatDate(dateString) {
