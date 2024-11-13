@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react'
 
 function Experience() {
-    const pb = new PocketBase("http://143.198.237.109:8090");
+    const pb = new PocketBase("http://143.198.237.109");
     const [Experience, setExperience] = useState(null);
 
     function formatDate(dateString) {
